@@ -1,11 +1,16 @@
-# ベースイメージとしてEclipse TemurinのJDK 17を使用
-FROM eclipse-temurin:17-jdk
+# --- Build Stage ---
+FROM eclipse-temurin:17-jdk AS build
+WORKDIR /app
+COPY . .
 
-# 作業ディレクトリを /app に設定
+# Mavenでビルド（ローカルにmvnwがある場合は ./mvnw を使う）
+RUN ./mvnw clean package -DskipTests
+
+# --- Run Stage ---
+FROM eclipse-temurin:17-jdk
 WORKDIR /app
 
-# ビルドされた jar ファイルを /app にコピー
-COPY target/task-manager-0.0.1-SNAPSHOT.jar app.jar
+# buildステージからjarをコピー
+COPY --from=build /app/target/task-manager-0.0.1-SNAPSHOT.jar app.jar
 
-# アプリケーションを実行
 ENTRYPOINT ["java", "-jar", "app.jar"]
