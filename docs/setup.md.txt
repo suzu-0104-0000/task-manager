@@ -1,0 +1,47 @@
+# プロジェクト初期設定メモ
+
+## 開発環境
+- IDE：Eclipse 2024（Pleiades）
+- Javaバージョン：21
+- ビルドツール：Maven
+- 作業フォルダ：C:\pleiades\2024-12\workspace\task-manager
+- Render は公開サーバー
+
+## Spring Starter Project 作成手順
+1. Eclipse起動（ワークスペース：上記）
+2. [新規] > [Spring Starter Project]
+3. プロジェクト名：task-manager
+4. Packaging：Jar
+5. Dependencies：
+   - Spring Web
+   - Thymeleaf
+   - Spring Boot DevTools
+   - Lombok
+   - Spring Data JPA
+6. 完了後、プロジェクトが `workspace/task-manager` に作成される
+
+
+
+# Task Manager アプリ（Spring Boot）
+
+## 🛠️ 使用技術
+- Java 21
+- Spring Boot
+- PostgreSQL（Renderで使用予定）
+- Maven
+- Eclipse (Pleiades)
+
+## 📦 セットアップ手順
+1. EclipseにてSpring Bootプロジェクト作成
+2. `application.properties` にDB設定を記述
+3. `HelloController` 作成済（`/hello` エンドポイント）
+
+## 🚀 起動方法
+1. Eclipseで「実行 → Javaアプリケーション」で `TaskManagerApplication` を起動
+2. ブラウザで http://localhost:8080/hello にアクセス
+
+## 🧩 今後の予定
+- GitHubへPush
+- Renderで公開
+- ER図の作成と機能設計
+

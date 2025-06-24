@@ -1,0 +1,38 @@
+# ビルド出力
+/target/
+build/
+dist/
+
+# Eclipse / STS / Pleiades
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+
+# IntelliJ
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/nbdist/
+/.nb-gradle/
+
+# VS Code
+.vscode/
+
+# Maven Wrapper（jarは含める）
+.mvn/wrapper/maven-wrapper.properties
+!/.mvn/wrapper/maven-wrapper.jar
+
+# OS固有
+.DS_Store
+Thumbs.db
+
+# その他（必要なら除外）
