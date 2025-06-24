@@ -28,8 +28,8 @@ dist/
 .vscode/
 
 # Maven Wrapper（jarは含める）
-.mvn/wrapper/maven-wrapper.properties
-!/.mvn/wrapper/maven-wrapper.jar
+!.mvn/wrapper/maven-wrapper.properties
+!.mvn/wrapper/maven-wrapper.jar
 
 # OS固有
 .DS_Store
