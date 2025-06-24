@@ -3,6 +3,9 @@ FROM eclipse-temurin:17-jdk AS build
 WORKDIR /app
 COPY . .
 
+# mvnwに実行権限を付与
+RUN chmod +x mvnw
+
 # Mavenでビルド（ローカルにmvnwがある場合は ./mvnw を使う）
 RUN ./mvnw clean package -DskipTests
 
