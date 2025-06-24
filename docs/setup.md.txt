@@ -40,6 +40,10 @@
 1. Eclipseで「実行 → Javaアプリケーション」で `TaskManagerApplication` を起動
 2. ブラウザで http://localhost:8080/hello にアクセス
 
+## PostgreSQL データベース設定
+- Render上でPostgreSQLインスタンス作成（検証環境）
+- RenderのDB接続情報をもとに実行時の環境変数に値を設定し実行
+
 ## 🧩 今後の予定
 - GitHubへPush
 - Renderで公開
