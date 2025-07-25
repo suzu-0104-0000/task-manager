@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ログイン - TaskManager</title>
+  <link rel="stylesheet" th:href="@{/css/header.css}" />
+  <link rel="stylesheet" th:href="@{/css/login.css}" />
+</head>
+<body>
+  <!-- 共通ヘッダー -->
+  <div th:replace="fragments/header :: header" th:with="pageTitle='ログイン'"></div>
+
+  <!-- ログインフォーム -->
+  <main class="login-container">
+    <form action="#" method="post" class="login-form">
+      <label for="usernameOrEmail">メールアドレスまたはユーザー名</label>
+      <input
+        type="text"
+        id="usernameOrEmail"
+        name="usernameOrEmail"
+        placeholder="メールアドレスまたはユーザー名"
+        required
+        autocomplete="username"
+      />
+
+      <label for="password">パスワード</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="パスワード"
+        required
+        autocomplete="current-password"
+      />
+
+      <button type="submit" class="login-button">ログイン</button>
+    </form>
+  </main>
+</body>
+</html>
